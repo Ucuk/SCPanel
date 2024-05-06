@@ -1,3 +1,3 @@
-git clone https://github.com/Ucuk/SCPanel.git
-cd SCPanel
+git clone https://github.com/Ucuk/SCPanel.git &&
+cd SCPanel &&
 npm i
